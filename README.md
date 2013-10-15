@@ -1,0 +1,4 @@
+DrawingMask
+===========
+
+Drawing dynamic mask
