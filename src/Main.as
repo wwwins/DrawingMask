@@ -2,6 +2,7 @@ package
 {
   import com.adobe.images.JPGEncoder;
   import com.adobe.images.PNGEncoder;
+  import com.flashisobar.ui.QuickButton;
   import flash.display.Bitmap;
   import flash.display.BitmapData;
   import flash.display.Sprite;
@@ -11,7 +12,6 @@ package
   import flash.events.MouseEvent;
   import flash.net.FileReference;
   import flash.utils.ByteArray;
-  import iqcat.ui.QuickButton;
 
   /**
    * drawing mask
@@ -51,7 +51,8 @@ package
 
       var before_bmp:Bitmap = new ImageBeforeClass();
       var after_bmp:Bitmap = new ImageAfterClass();
-      drawingMask = new DrawingMask(before_bmp.bitmapData, after_bmp.bitmapData);
+      drawingMask = new DrawingMask();
+      drawingMask.init(before_bmp.bitmapData, after_bmp.bitmapData);
       addChild(drawingMask);
     }
 
